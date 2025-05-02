@@ -26,4 +26,11 @@ public class CertificateUpdateGenerator {
         return ret;
 
     }
+
+    public List<CertificateUpdate> updateList(){
+        List<CertificateUpdate> updates = new ArrayList<>();
+        Stream<CertificateUpdate> stream = generateQuotes();
+        stream.forEach(updates::add);
+        return updates;
+    }
 }
