@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class CertificateUpdateCallable implements Callable<> {
+public class CertificateUpdateCallable implements Callable<String> {
     @Override
     public String call() throws Exception {
         ThreadLocalRandom random = ThreadLocalRandom.current();
