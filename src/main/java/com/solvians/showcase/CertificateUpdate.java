@@ -38,7 +38,7 @@ public class CertificateUpdate {
         String isIn = ISINGenerator.generateIsIn();
 
         double bidPrice = random.nextDouble(100.00, 200.00);
-        System.out.println("bidPrice : " + bidPrice);
+//        System.out.println("bidPrice : " + bidPrice);
 
         int bidSize = random.nextInt(1000,5000);
 

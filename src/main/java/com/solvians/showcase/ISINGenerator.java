@@ -13,7 +13,7 @@ public class ISINGenerator {
         }
         // 2 random alphabet added
 
-        System.out.println("isin : " + isin);
+//        System.out.println("isin : " + isin);
 
         for(int i=0;i<9;i++){
             ThreadLocalRandom random = ThreadLocalRandom.current();
@@ -26,11 +26,11 @@ public class ISINGenerator {
                 char ch = (char) ('A' + random.nextInt(26));
                 isin.append(ch);
             }
-            System.out.println("isin : " + isin);
+//            System.out.println("isin : " + isin);
         }
         // 9 random number/alphabet addded
 
-        System.out.println("isin final: " + isin);
+//        System.out.println("isin final: " + isin);
 
 
         int checkDigit = checkDigit("DE123456789");
@@ -51,7 +51,7 @@ public class ISINGenerator {
             }
         }
 
-        System.out.println("isInWithCheckDigit : " + isInWithCheckDigit);
+//        System.out.println("isInWithCheckDigit : " + isInWithCheckDigit);
 
         // claculate sum
         String reversedIsInWithCheckDigit = isInWithCheckDigit.reverse().toString();
@@ -69,9 +69,9 @@ public class ISINGenerator {
             }
             rightmost++;
         }
-        System.out.println("sum : " + sum);
+//        System.out.println("sum : " + sum);
 
-        System.out.println("isInWithCheckDigit : " + isInWithCheckDigit);
+//        System.out.println("isInWithCheckDigit : " + isInWithCheckDigit);
 
         int lastDigit = sum % 10;
         int checkbit = 10 - lastDigit;
