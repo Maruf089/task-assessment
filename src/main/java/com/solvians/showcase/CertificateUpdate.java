@@ -9,12 +9,12 @@ public class CertificateUpdate {
     private final long timestamp;
     private final String isin;
     private final double bidPrice;
-    private final String bidSize;
+    private final int bidSize;
     private final double askPrice;
     private final int askSize;
     private final LocalDate maturityDate;
 
-    public CertificateUpdate(int timestamp, String isin, double bidPrice, String bidSize, double askPrice, int askSize, LocalDate maturityDate) {
+    public CertificateUpdate(long timestamp, String isin, double bidPrice, int bidSize, double askPrice, int askSize, LocalDate maturityDate) {
         this.timestamp = timestamp;
         this.isin = isin;
         this.bidPrice = bidPrice;
@@ -35,8 +35,20 @@ public class CertificateUpdate {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         // provided long
         long timestamp =  System.currentTimeMillis();
+        String isIn = ISINGenerator.generateIsIn();
 
-        return null;
+        double bidPrice = random.nextDouble(100.00, 200.00);
+        System.out.println("bidPrice : " + bidPrice);
+
+        int bidSize = random.nextInt(1000,5000);
+
+        double askPrice = random.nextDouble(100.00, 200.00);
+
+        int askSize = random.nextInt(1000,10000);
+
+        LocalDate maturityDate = LocalDate.now().plusYears(2);
+
+        return new CertificateUpdate(timestamp,isIn,bidPrice,bidSize,askPrice,askSize,maturityDate);
     }
 
 
