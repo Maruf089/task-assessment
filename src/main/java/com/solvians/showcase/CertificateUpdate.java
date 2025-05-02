@@ -1,11 +1,12 @@
 package com.solvians.showcase;
 
 import java.time.LocalDate;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class CertificateUpdate {
 
     // TODO: implement me.
-    private final int timestamp;
+    private final long timestamp;
     private final String isin;
     private final double bidPrice;
     private final String bidSize;
@@ -28,6 +29,14 @@ public class CertificateUpdate {
         String res = String.format("%d,%s,%.2f,%d,%.2f,%d,%s",
                 timestamp,isin,bidPrice,bidSize,askPrice,askSize,maturityDate);
         return res;
+    }
+
+    public static CertificateUpdate geneRandomCertificate(){
+        ThreadLocalRandom random = ThreadLocalRandom.current();
+        // provided long
+        long timestamp =  System.currentTimeMillis();
+
+        return null;
     }
 
 
