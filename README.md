@@ -16,14 +16,4 @@ Ask Size (1,000-10,000)
 Maturity Date (within next 2 years)
 
 ## Project Structure
-src/
-├── main/
-│   ├── java/
-│   │   ├── App.java                    # Main application class
-│   │   ├── CertificateUpdate.java      # Data model
-│   │   ├── CertificateUpdateCallable.java # Callable generator
-│   │   ├── CertificateUpdateGenerator.java 
-│   │   └── ISINGenerator.java          # ISIN generation
-│   └── resources/
-└── test/
-    ├── java/                           # Unit tests
+![Image](https://github.com/user-attachments/assets/509206db-f44e-4e05-b1a4-21c2fbb3c051)
