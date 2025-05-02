@@ -22,4 +22,13 @@ public class CertificateUpdate {
         this.askSize = askSize;
         this.maturityDate = maturityDate;
     }
+
+    @Override
+    public String toString(){
+        String res = String.format("%d,%s,%.2f,%d,%.2f,%d,%s",
+                timestamp,isin,bidPrice,bidSize,askPrice,askSize,maturityDate);
+        return res;
+    }
+
+
 }
