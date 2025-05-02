@@ -26,7 +26,7 @@ public class App {
 //        ISINGenerator.generateIsIn();
  //       ISINGenerator.generateIsIn(“DE123456789”);
 
-        if (args.length >= 2 || args.length<=2) {
+        if (args.length >= 2) {
             int threads = Integer.parseInt(args[0]);
             int quotes = Integer.parseInt(args[1]);
 
