@@ -17,7 +17,7 @@ public class CertificateUpdateGenerator {
     public Stream<CertificateUpdate> generateQuotes() {
         ThreadLocalRandom random = ThreadLocalRandom.current();
 
-        Stream<CertificateUpdate> ret =  Stream.generate(CertificateUpdate::geneRandomCertificate).parallel().limit(quotes);
+        Stream<CertificateUpdate> ret =  Stream.generate(CertificateUpdate::geneRandomCertificate).parallel().limit(quotes * threads);
 
 //        List<CertificateUpdate> updateList = new ArrayList<CertificateUpdate>();
 //        for (int i = 0; i < threads * quotes; i++) {
