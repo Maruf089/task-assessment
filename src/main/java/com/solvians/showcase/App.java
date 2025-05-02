@@ -10,7 +10,7 @@ public class App {
 
     public static void main(String[] args) {
         if (args.length >= 2) {
-            int threads = Integer.parseInt(args[0]);
+        int threads = Integer.parseInt(args[0]);
             int quotes = Integer.parseInt(args[1]);
 
             CertificateUpdateGenerator certificateUpdateGenerator = new CertificateUpdateGenerator(threads, quotes);
